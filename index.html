@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Image Processing with WebGL</title>
+</head>
+
+<body>
+    <div id="gui-container">
+        <!-- GUI elements for controlling image processing parameters -->
+        <label for="brightness">Brightness:</label>
+        <input type="range" id="brightness" min="-1" max="1" step="0.1" value="0">
+
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" min="0" max="2" step="0.1" value="1">
+
+        <label for="saturation">Saturation:</label>
+        <input type="range" id="saturation" min="0" max="2" step="0.1" value="1">
+
+        <!-- Button to toggle between greyscale and color modes -->
+        <button id="toggle-mode">Toggle Greyscale</button>
+        
+        <!-- Button to apply brightness and contrast -->
+        <button id="load-random-image">Load Random Image</button>
+
+    </div>
+
+    <!-- Your WebGL canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.4.0/gl-matrix-min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
